@@ -1,0 +1,61 @@
+<!-- Created with Jaspersoft Studio version 7.0.0.final using JasperReports Library version 7.0.0-b478feaa9aab4375eba71de77b4ca138ad2f62aa  -->
+<jasperReport name="Supplier" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f1c3e23a-6ce2-4ddd-b8e9-be6297f61a32">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ResturentDBConnection"/>
+	<query language="SQL"><![CDATA[ select * from supplier;]]></query>
+	<field name="Sup_Id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="Sup_Id"/>
+		<property name="com.jaspersoft.studio.field.label" value="Sup_Id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supplier"/>
+	</field>
+	<field name="Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Name"/>
+		<property name="com.jaspersoft.studio.field.label" value="Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supplier"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="79" splitType="Stretch">
+		<element kind="staticText" uuid="3b34fc10-b7dd-4f05-bb91-45f880a60b3c" x="0" y="0" width="550" height="62" fontSize="26.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Supplier Report
+]]></text>
+		</element>
+	</title>
+	<pageHeader height="35" splitType="Stretch"/>
+	<columnHeader height="30" splitType="Stretch">
+		<element kind="staticText" uuid="5b4cd3fa-6eff-4332-a71a-9cc6cbea6891" x="0" y="0" width="278" height="30" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Sup_Id]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6dacec67-3971-45ff-bdd7-c5cc1cebc274"/>
+			<box>
+				<pen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="aa2e5bc1-c5c9-49a7-a624-88aa7b9b61f8" x="278" y="0" width="277" height="30" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Name]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c9cccf18-ffdb-4556-aafd-4d367701147c"/>
+			<box>
+				<pen lineWidth="1.0"/>
+			</box>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<element kind="textField" uuid="88246acb-3503-4f4b-b273-9bd703b76c6d" x="0" y="0" width="278" height="30" bold="true" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{Sup_Id}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6dacec67-3971-45ff-bdd7-c5cc1cebc274"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="a14bbd01-0d81-4d2a-af7a-90ef74e4f6c0" x="278" y="0" width="277" height="30" bold="true" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{Name}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c9cccf18-ffdb-4556-aafd-4d367701147c"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="45" splitType="Stretch"/>
+	<pageFooter height="54" splitType="Stretch"/>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>

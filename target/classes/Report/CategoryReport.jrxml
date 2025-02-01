@@ -1,0 +1,63 @@
+<!-- Created with Jaspersoft Studio version 7.0.0.final using JasperReports Library version 7.0.0-b478feaa9aab4375eba71de77b4ca138ad2f62aa  -->
+<jasperReport name="CategoryReport" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="85a22ba9-f3d4-4768-876e-40a0d0692f21">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ResturentDBConnection"/>
+	<query language="SQL"><![CDATA[ select * from category;]]></query>
+	<field name="Cat_Id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="Cat_Id"/>
+		<property name="com.jaspersoft.studio.field.label" value="Cat_Id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="category"/>
+	</field>
+	<field name="Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Name"/>
+		<property name="com.jaspersoft.studio.field.label" value="Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="category"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="79" splitType="Stretch">
+		<element kind="staticText" uuid="430a93db-040f-496d-8700-52628bf72fe0" x="0" y="0" width="560" height="71" fontSize="26.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Category Report]]></text>
+			<box>
+				<pen lineWidth="0.0"/>
+			</box>
+		</element>
+	</title>
+	<pageHeader height="35" splitType="Stretch"/>
+	<columnHeader height="32" splitType="Stretch">
+		<element kind="staticText" uuid="6995a311-0a3f-484d-b423-252198a2e62d" x="0" y="0" width="278" height="30" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Cat_Id]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9d46db44-66af-4718-b5e9-d77fb2e7a81f"/>
+			<box>
+				<pen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="a6522715-881f-4244-b8b5-d2d4f2ba7bb3" x="278" y="0" width="277" height="30" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Name]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cbeb2fe7-c5f3-4b5d-b9fb-dea55302e9bf"/>
+			<box>
+				<pen lineWidth="1.0"/>
+			</box>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="33" splitType="Stretch">
+			<element kind="textField" uuid="82848ad1-dd9a-476b-a9c3-4d9133d5da2f" x="0" y="0" width="278" height="30" bold="true" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{Cat_Id}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9d46db44-66af-4718-b5e9-d77fb2e7a81f"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="afa701ac-1226-4dee-871d-644110cfa802" x="278" y="0" width="277" height="30" bold="true" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{Name}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cbeb2fe7-c5f3-4b5d-b9fb-dea55302e9bf"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="45" splitType="Stretch"/>
+	<pageFooter height="54" splitType="Stretch"/>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>

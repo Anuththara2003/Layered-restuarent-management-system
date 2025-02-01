@@ -1,0 +1,130 @@
+<!-- Created with Jaspersoft Studio version 7.0.0.final using JasperReports Library version 7.0.0-b478feaa9aab4375eba71de77b4ca138ad2f62aa  -->
+<jasperReport name="Feedback" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="36277b43-4dae-4af1-b9af-6304a364903c">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ResturentDBConnection"/>
+	<query language="SQL"><![CDATA[SELECT 
+    f.Fee_Id, 
+    f.Description, 
+    f.Cust_Id, 
+    c.Name, 
+    c.Address 
+FROM 
+    feedback f 
+JOIN 
+    customer c 
+ON 
+    f.Cust_Id = c.Cust_Id;
+]]></query>
+	<field name="Fee_Id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="Fee_Id"/>
+		<property name="com.jaspersoft.studio.field.label" value="Fee_Id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="feedback"/>
+	</field>
+	<field name="Description" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Description"/>
+		<property name="com.jaspersoft.studio.field.label" value="Description"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="feedback"/>
+	</field>
+	<field name="Cust_Id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="Cust_Id"/>
+		<property name="com.jaspersoft.studio.field.label" value="Cust_Id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="feedback"/>
+	</field>
+	<field name="Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Name"/>
+		<property name="com.jaspersoft.studio.field.label" value="Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<field name="Address" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Address"/>
+		<property name="com.jaspersoft.studio.field.label" value="Address"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="79" splitType="Stretch">
+		<element kind="staticText" uuid="a232df4a-d4e7-418b-a6e0-f62d4065fe56" x="0" y="0" width="550" height="70" fontSize="26.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[FeedBack Report
+]]></text>
+		</element>
+	</title>
+	<pageHeader height="35" splitType="Stretch"/>
+	<columnHeader height="30" splitType="Stretch">
+		<element kind="staticText" uuid="d5818cca-8c7e-4d7e-9b93-c66d54adb63f" x="0" y="0" width="111" height="30" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Fee_Id]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e6a2990d-7869-4f94-99a5-b00ef696db43"/>
+			<box>
+				<pen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="e3ecdaa8-daa0-40cf-8828-ac0bb16bd75b" x="111" y="0" width="111" height="30" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Description]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="929dcc88-0e5d-438b-8a95-893091cc23f5"/>
+			<box>
+				<pen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="0d34e0b4-68d5-4f42-9cbf-a85f59a3513f" x="222" y="0" width="111" height="30" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Cust_Id]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="369ec959-f0b2-47e5-beda-d32e1bc97307"/>
+			<box>
+				<pen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="cbf0f83e-f39c-4245-8fa7-f29067bc6d6f" x="333" y="0" width="111" height="30" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Name]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dc7355d1-f66a-4728-9c39-22a5b2134b38"/>
+			<box>
+				<pen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="cfcfa730-4970-4e29-971b-5d5db1c6a6d7" x="444" y="0" width="111" height="30" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Address]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5860c5a9-3454-4f92-b282-b24b98c040d2"/>
+			<box>
+				<pen lineWidth="1.0"/>
+			</box>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<element kind="textField" uuid="1126876f-8a7d-4c9b-b41b-7f362ba50cab" x="0" y="0" width="111" height="30" bold="true" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{Fee_Id}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e6a2990d-7869-4f94-99a5-b00ef696db43"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="937bbc31-a1bc-450f-a7d3-a50926e3d1ac" x="111" y="0" width="111" height="30" bold="true" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{Description}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="929dcc88-0e5d-438b-8a95-893091cc23f5"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="2e264a6c-e5ca-4339-b43d-0f40eff89fce" x="222" y="0" width="111" height="30" bold="true" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{Cust_Id}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="369ec959-f0b2-47e5-beda-d32e1bc97307"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="23187831-62fe-4749-940a-edf01d5c1e6b" x="333" y="0" width="111" height="30" bold="true" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{Name}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dc7355d1-f66a-4728-9c39-22a5b2134b38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="2022d2b8-5f0c-4942-b5bb-ec485f6a022f" x="444" y="0" width="111" height="30" bold="true" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{Address}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5860c5a9-3454-4f92-b282-b24b98c040d2"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="45" splitType="Stretch"/>
+	<pageFooter height="54" splitType="Stretch"/>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>

@@ -1,0 +1,135 @@
+<!-- Created with Jaspersoft Studio version 7.0.0.final using JasperReports Library version 7.0.0-b478feaa9aab4375eba71de77b4ca138ad2f62aa  -->
+<jasperReport name="InventoryReport" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d0eced81-bced-4cdd-9630-e16fddd70a83">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ResturentDBConnection"/>
+	<query language="SQL"><![CDATA[SELECT 
+    b.Branch_Id, 
+    b.Name AS Branch_Name, 
+    b.Location, 
+    b.Emp_Id, 
+    i.Inven_Id, 
+    i.Description AS Inventory_Item
+FROM 
+    branch b
+JOIN 
+    inventory i
+ON 
+    b.Branch_Id = i.Branch_Id;
+]]></query>
+	<field name="Branch_Id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="Branch_Id"/>
+		<property name="com.jaspersoft.studio.field.label" value="Branch_Id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="branch"/>
+	</field>
+	<field name="Branch_Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Name"/>
+		<property name="com.jaspersoft.studio.field.label" value="Branch_Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="branch"/>
+	</field>
+	<field name="Location" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Location"/>
+		<property name="com.jaspersoft.studio.field.label" value="Location"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="branch"/>
+	</field>
+	<field name="Emp_Id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="Emp_Id"/>
+		<property name="com.jaspersoft.studio.field.label" value="Emp_Id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="branch"/>
+	</field>
+	<field name="Inven_Id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="Inven_Id"/>
+		<property name="com.jaspersoft.studio.field.label" value="Inven_Id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="inventory"/>
+	</field>
+	<field name="Inventory_Item" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Description"/>
+		<property name="com.jaspersoft.studio.field.label" value="Inventory_Item"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="inventory"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="79" splitType="Stretch">
+		<element kind="staticText" uuid="9e8f5e4a-980c-4ec0-87ad-88599b777755" x="0" y="0" width="544" height="79" fontSize="26.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Inventory Report]]></text>
+		</element>
+	</title>
+	<pageHeader height="35" splitType="Stretch"/>
+	<columnHeader height="32" splitType="Stretch">
+		<element kind="staticText" uuid="44ab64e0-93fb-4eba-b834-ae4401ce1b03" x="0" y="0" width="111" height="30" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Branch_Id]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="af768504-3895-4474-b86f-2a8bea2ed6d4"/>
+			<box>
+				<pen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="2396fe92-043a-466e-96d8-f8d1e61e06b8" x="111" y="0" width="111" height="30" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Branch_Name]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ac974b6d-d464-4c23-960e-129f1871051a"/>
+			<box>
+				<pen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="2de2011c-b896-447f-ac57-fdd17c0cdd08" x="222" y="0" width="111" height="30" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Location]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7f8e3c22-3b19-49cb-9f5a-e72ebba31ed3"/>
+			<box>
+				<pen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="579dbf7d-65c2-442a-b793-d5ca4ce8203f" x="333" y="0" width="111" height="30" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Inven_Id]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="581e0761-f3e2-4538-9301-fb9af2ea01fd"/>
+			<box>
+				<pen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="5978b179-50dc-40de-a5ab-4e7489de3da0" x="444" y="0" width="111" height="30" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Inventory_Item]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cdabc980-15a2-4338-8f67-829057ce1e6a"/>
+			<box>
+				<pen lineWidth="1.0"/>
+			</box>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="33" splitType="Stretch">
+			<element kind="textField" uuid="e7e57a14-1a8d-42b4-a5bd-c1c7675eff2b" x="0" y="0" width="111" height="30" bold="true" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{Branch_Id}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="af768504-3895-4474-b86f-2a8bea2ed6d4"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="8cd5ba72-97bd-4869-b81b-3d4f39cc86b7" x="111" y="0" width="111" height="30" bold="true" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{Branch_Name}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ac974b6d-d464-4c23-960e-129f1871051a"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="7a4511d9-78ac-477f-8bbc-c536340a93d2" x="222" y="0" width="111" height="30" bold="true" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{Location}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7f8e3c22-3b19-49cb-9f5a-e72ebba31ed3"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="c93cbaec-5300-4701-afe2-e5f8a3e5d4bf" x="333" y="0" width="111" height="30" bold="true" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{Inven_Id}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="581e0761-f3e2-4538-9301-fb9af2ea01fd"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="0d246a62-5e4d-4afd-8d7c-dcaa40dceea2" x="444" y="0" width="111" height="30" bold="true" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{Inventory_Item}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cdabc980-15a2-4338-8f67-829057ce1e6a"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="45" splitType="Stretch"/>
+	<pageFooter height="54" splitType="Stretch"/>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>

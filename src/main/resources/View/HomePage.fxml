@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchome" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assignment.resturentmanagementsystem.Controller.HomePageController">
+   <children>
+      <VBox alignment="TOP_RIGHT" layoutX="260.0" prefHeight="233.0" prefWidth="542.0">
+         <children>
+            <ImageView fitHeight="232.0" fitWidth="593.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/restoran.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <HBox layoutX="4.0" layoutY="7.0" prefHeight="500.0" prefWidth="258.0">
+         <children>
+            <VBox prefHeight="500.0" prefWidth="255.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="134.0" prefWidth="255.0">
+                     <children>
+                        <ImageView fitHeight="133.0" fitWidth="192.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/3.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="161.0" prefWidth="255.0">
+                     <children>
+                        <ImageView fitHeight="127.0" fitWidth="262.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/2.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="169.0" prefWidth="255.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/1.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children></HBox>
+      <HBox alignment="CENTER" layoutX="387.0" layoutY="289.0" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="clickhear" mnemonicParsing="false" onMouseClicked="#onclickhear" style="-fx-background-color: #130f40;" text="Click Here ..!" textFill="#f2ecec">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

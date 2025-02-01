@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="DashBoardAnc" minHeight="500.0" minWidth="800.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assignment.resturentmanagementsystem.Controller.DashboardController">
+   <children>
+      <VBox layoutX="-1.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox prefHeight="36.0" style="-fx-background-color: #22C55E;">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="47.0" prefWidth="800.0" style="-fx-background-color: #30336b;">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#customerOnAction" prefHeight="26.0" prefWidth="174.0" style="-fx-background-color: #4834d4;" text="Customer" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="9.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#branchOnAction" prefHeight="26.0" prefWidth="159.0" style="-fx-background-color: #be2edd;" text="Branch" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="117.0" layoutY="15.0" mnemonicParsing="false" onAction="#orderOnAction" prefHeight="26.0" prefWidth="152.0" style="-fx-background-color: #535c68;" text="Orders" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="211.0" layoutY="15.0" mnemonicParsing="false" onAction="#MenuOnAction" prefHeight="26.0" prefWidth="146.0" style="-fx-background-color: #22C55E;" text="Menu" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="308.0" layoutY="15.0" mnemonicParsing="false" onAction="#FeedbackOnAction" prefHeight="26.0" prefWidth="167.0" style="-fx-background-color: #ff7979;" text="Feddback" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Label maxWidth="1.7976931348623157E308" prefHeight="18.0" HBox.hgrow="ALWAYS" />
+                        <Button mnemonicParsing="false" onAction="#EmployeeOnAction" prefHeight="26.0" prefWidth="160.0" style="-fx-background-color: #e1b12c;" text="Employee" textFill="#fcf4f4">
+                           <HBox.margin>
+                              <Insets left="6.0" right="2.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#SupplierOnAction" prefHeight="26.0" prefWidth="160.0" style="-fx-background-color: #487eb0;" text="Suppiler" textFill="#fcf4f4">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="LogOutBtn" mnemonicParsing="false" onAction="#LogoutAction" prefHeight="26.0" prefWidth="171.0" style="-fx-background-color: #22a6b3;" text="Logout" textFill="#effcf4">
+                           <HBox.margin>
+                              <Insets left="20.0" right="5.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox prefHeight="464.0" prefWidth="800.0">
+               <children>
+                  <AnchorPane fx:id="LoadPain" prefHeight="464.0" prefWidth="801.0">
+                     <children>
+                        <ImageView fitHeight="488.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/resturent.jpg" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

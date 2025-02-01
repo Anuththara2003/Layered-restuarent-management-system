@@ -1,0 +1,98 @@
+<!-- Created with Jaspersoft Studio version 7.0.0.final using JasperReports Library version 7.0.0-b478feaa9aab4375eba71de77b4ca138ad2f62aa  -->
+<jasperReport name="Branchreport" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="06538bac-5c6f-436d-9973-781035707dcf">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ResturentDBConnection"/>
+	<query language="SQL"><![CDATA[ select * from branch;]]></query>
+	<field name="Branch_Id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="Branch_Id"/>
+		<property name="com.jaspersoft.studio.field.label" value="Branch_Id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="branch"/>
+	</field>
+	<field name="Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Name"/>
+		<property name="com.jaspersoft.studio.field.label" value="Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="branch"/>
+	</field>
+	<field name="Location" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Location"/>
+		<property name="com.jaspersoft.studio.field.label" value="Location"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="branch"/>
+	</field>
+	<field name="Emp_Id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="Emp_Id"/>
+		<property name="com.jaspersoft.studio.field.label" value="Emp_Id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="branch"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="79" splitType="Stretch">
+		<element kind="staticText" uuid="ef87bf86-9991-4b96-b35d-189a65877f5b" x="0" y="0" width="544" height="68" fontSize="26.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Branch Report]]></text>
+		</element>
+	</title>
+	<pageHeader height="35" splitType="Stretch"/>
+	<columnHeader height="29" splitType="Stretch">
+		<element kind="staticText" uuid="5d5ee392-2268-4c4f-a060-0ba0dac140d7" x="0" y="0" width="141" height="30" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Branch_Id]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1f931808-f36a-4cf1-a1c6-f683e574fdde"/>
+			<box>
+				<pen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="5af63090-81c9-42f8-a6d0-795cc2b9c767" x="141" y="0" width="138" height="30" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Name]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4eee9aec-5ad7-4af5-8958-830357c855a5"/>
+			<box>
+				<pen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="b6b55a18-3464-4969-8c91-c08f616affc7" x="279" y="0" width="138" height="30" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Location]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="68cfceba-43e4-4cfa-a0c9-3572a1b57838"/>
+			<box>
+				<pen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="855eb593-cbd0-4482-ad77-d7c5863b4402" x="417" y="0" width="138" height="30" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Emp_Id]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="eb24d7bc-cd20-49a3-b947-8b3d5b2cec55"/>
+			<box>
+				<pen lineWidth="1.0"/>
+			</box>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="36" splitType="Stretch">
+			<element kind="textField" uuid="70eb2fa5-d66d-4ce3-9144-57fab86a60f6" x="0" y="0" width="141" height="30" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{Branch_Id}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1f931808-f36a-4cf1-a1c6-f683e574fdde"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="b0f709a5-a1f9-44ea-9c64-603d4f9287b3" x="141" y="0" width="138" height="30">
+				<expression><![CDATA[$F{Name}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4eee9aec-5ad7-4af5-8958-830357c855a5"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="e320e94c-7dc1-4e3e-85a8-6d0128a05974" x="279" y="0" width="138" height="30">
+				<expression><![CDATA[$F{Location}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="68cfceba-43e4-4cfa-a0c9-3572a1b57838"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="44fb0270-b32c-4075-b967-9e290e235974" x="417" y="0" width="138" height="30" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{Emp_Id}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="eb24d7bc-cd20-49a3-b947-8b3d5b2cec55"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="45" splitType="Stretch"/>
+	<pageFooter height="54" splitType="Stretch"/>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>
