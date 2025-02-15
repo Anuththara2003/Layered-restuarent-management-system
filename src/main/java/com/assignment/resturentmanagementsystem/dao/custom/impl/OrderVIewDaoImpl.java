@@ -51,11 +51,8 @@ public class OrderVIewDaoImpl implements OrderViewDao {
         ResultSet rst =  CrudUtil.execute("select Order_Id from orders order by Order_Id desc limit 1");
 
         if (rst.next()){
-            int lastId = rst.getInt(1);
-            int newIdIndex = lastId+1;
-
-            return  newIdIndex;
+            return rst.getInt(1);
         }
-        return  1;
+        return  0;
     }
 }

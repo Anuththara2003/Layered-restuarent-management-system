@@ -14,6 +14,7 @@ public class Main extends Application {
         stage.setTitle("RESTURENT MANAGEMENT SYSTEM");
         Image image = new Image(getClass().getResourceAsStream("/Images/res icon.jpg"));
         stage.getIcons().add(image);
+        stage.setResizable(false);
         stage.show();
 
     }

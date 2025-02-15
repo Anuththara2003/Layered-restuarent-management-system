@@ -28,6 +28,14 @@ public class OrderViewBoimpl implements OrderViewBo {
     }
 
     public int getNextOrderId() throws SQLException, ClassNotFoundException {
-        return orderViewDao.getNextOrderId();
+//        return orderViewDao.getNextOrderId();
+        int id = orderViewDao.getNextOrderId();
+
+        if (id > 0){
+            int newIdIndex = id+1;
+            return  newIdIndex;
+        }
+
+        return 1;
     }
 }
